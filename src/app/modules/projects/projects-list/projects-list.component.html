@@ -1,7 +1,7 @@
-<wow-project-card
-    [project]="{
-        id: '1',
-        name: 'name',
-        description: 'desc'
-    }"
-></wow-project-card>
+<div class="projects-list">
+    @for (project of _projects; track project.id) {
+        <wow-project-card
+                [project]="project"
+        ></wow-project-card>
+    }
+</div>

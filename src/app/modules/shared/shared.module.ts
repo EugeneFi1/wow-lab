@@ -6,6 +6,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {CommonModule} from "@angular/common";
 
 const MATERIAL_DESIGN_COMPONENTS = [
     MatButtonModule,
@@ -19,6 +20,7 @@ const MATERIAL_DESIGN_COMPONENTS = [
 
 @NgModule({
     exports: [
+        CommonModule,
         ...MATERIAL_DESIGN_COMPONENTS,
     ]
 })
