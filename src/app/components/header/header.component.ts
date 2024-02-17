@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {SharedModule} from "../../modules/shared.module";
+import {SharedModule} from "../../modules/shared/shared.module";
 
 @Component({
     selector: 'wow-header',
