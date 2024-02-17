@@ -1,10 +1,11 @@
-import { NgModule } from "@angular/core";
-import { MatButtonModule } from '@angular/material/button';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatCardModule } from '@angular/material/card';
+import {NgModule} from "@angular/core";
+import {MatButtonModule} from '@angular/material/button';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 const MATERIAL_DESIGN_COMPONENTS = [
     MatButtonModule,
@@ -12,7 +13,8 @@ const MATERIAL_DESIGN_COMPONENTS = [
     MatBottomSheetModule,
     MatBadgeModule,
     MatButtonToggleModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule
 ];
 
 @NgModule({
@@ -20,4 +22,5 @@ const MATERIAL_DESIGN_COMPONENTS = [
         ...MATERIAL_DESIGN_COMPONENTS,
     ]
 })
-export class SharedModule { }
+export class SharedModule {
+}
