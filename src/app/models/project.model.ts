@@ -7,4 +7,5 @@ export interface Project {
 export interface ProjectsStateModel {
     projects: Project[];
     selectedProject?: Project;
+    loading?: boolean;
 }
