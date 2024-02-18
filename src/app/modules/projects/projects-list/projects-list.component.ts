@@ -1,5 +1,4 @@
 import {ChangeDetectionStrategy, Component} from "@angular/core";
-import {Project} from "../../../models/project.model";
 import {ProjectsState} from "../projects.state";
 
 
@@ -13,9 +12,5 @@ export class ProjectsListComponent {
     public _projects$ = this.state.select("projects");
 
     constructor(private state: ProjectsState) {
-    }
-
-    public _selectProject(id: Project["id"]): void {
-        this.state.selectProject(id);
     }
 }

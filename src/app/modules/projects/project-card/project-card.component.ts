@@ -6,6 +6,6 @@ import {Project} from "../../../models/project.model";
     templateUrl: './project-card.component.html',
     styleUrls: ['./project-card.component.less']
 })
-export class ProjectCard {
+export class ProjectCardComponent {
     @Input({required: true}) project!: Project;
 }

@@ -1,0 +1,5 @@
+@if (_selectedProject$ | async; as selectedProject) {
+    {{selectedProject.id}}: {{selectedProject.name}} - {{selectedProject.description}}
+} @else {
+    <span>Loading...</span>
+}

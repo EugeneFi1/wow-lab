@@ -2,14 +2,19 @@ import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import {ProjectsComponent} from "./projects.component";
 import {ProjectsListComponent} from "./projects-list/projects-list.component";
-import {ProjectCard} from "./project-card/project-card.component";
+import {ProjectCardComponent} from "./project-card/project-card.component";
 import {SharedModule} from "../shared/shared.module";
 import {ProjectsState} from "./projects.state";
+import {ProjectOverviewComponent} from "./project-overview/project-overview.component";
 
 const routes: Routes = [
     {
         path: '',
         component: ProjectsComponent
+    },
+    {
+        path: ':id',
+        component: ProjectOverviewComponent
     }
 ];
 
@@ -17,7 +22,8 @@ const routes: Routes = [
     declarations: [
         ProjectsComponent,
         ProjectsListComponent,
-        ProjectCard
+        ProjectCardComponent,
+        ProjectOverviewComponent
     ],
     providers: [ProjectsState],
     imports: [
