@@ -1,18 +1,7 @@
 import {ChangeDetectionStrategy, Component} from "@angular/core";
 import {Project} from "../../../models/project.model";
+import {ProjectsState} from "../projects.state";
 
-const projects: Project[] = [
-    {
-        id: "1",
-        name: "d3 js",
-        description: "Test d3.js lib"
-    },
-    {
-        id: "2",
-        name: "Binary search tree",
-        description: "Binary search tree test"
-    }
-]
 
 @Component({
     selector: 'wow-projects-list',
@@ -21,5 +10,12 @@ const projects: Project[] = [
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectsListComponent {
-    public _projects = projects;
+    public _projects$ = this.state.select("projects");
+
+    constructor(private state: ProjectsState) {
+    }
+
+    public _selectProject(id: Project["id"]): void {
+        this.state.selectProject(id);
+    }
 }

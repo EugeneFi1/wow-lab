@@ -1,7 +1,8 @@
 <div class="projects-list">
-    @for (project of _projects; track project.id) {
+    @for (project of _projects$ | async; track project.id) {
         <wow-project-card
                 [project]="project"
+                (click)="_selectProject(project.id)"
         ></wow-project-card>
     }
 </div>

@@ -3,3 +3,8 @@ export interface Project {
     name: string;
     description: string;
 }
+
+export interface ProjectsStateModel {
+    projects: Project[];
+    selectedProject?: Project;
+}
