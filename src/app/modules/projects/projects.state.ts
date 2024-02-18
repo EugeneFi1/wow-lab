@@ -13,6 +13,11 @@ const projects: Project[] = [
         id: "2",
         name: "Binary search tree",
         description: "Binary search tree test"
+    },
+    {
+        id: "3",
+        name: "Angular signals",
+        description: "Angular signals test"
     }
 ]
 
