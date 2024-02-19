@@ -4,7 +4,6 @@ import {ProjectsComponent} from "./projects.component";
 import {ProjectsListComponent} from "./projects-list/projects-list.component";
 import {ProjectCardComponent} from "./project-card/project-card.component";
 import {SharedModule} from "../shared/shared.module";
-import {ProjectsState} from "./projects.state";
 import {ProjectOverviewComponent} from "./project-overview/project-overview.component";
 
 const routes: Routes = [
@@ -25,7 +24,6 @@ const routes: Routes = [
         ProjectCardComponent,
         ProjectOverviewComponent
     ],
-    providers: [ProjectsState],
     imports: [
         RouterModule.forChild(routes),
         SharedModule

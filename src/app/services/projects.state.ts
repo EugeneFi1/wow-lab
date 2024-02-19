@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {RxState} from "@rx-angular/state";
-import {Project, ProjectsStateModel} from "../../models/project.model";
+import {Project, ProjectsStateModel} from "../models/project.model";
 import {map, of, Subject, switchMap} from "rxjs";
 
 const projects: Project[] = [
@@ -21,7 +21,7 @@ const projects: Project[] = [
     }
 ]
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class ProjectsState extends RxState<ProjectsStateModel> {
     private selectedProjectTrigger = new Subject<Project["id"]>();
 

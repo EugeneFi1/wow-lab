@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component} from "@angular/core";
-import {ProjectsState} from "../projects.state";
+import {ProjectsState} from "../../../services/projects.state";
 
 
 @Component({

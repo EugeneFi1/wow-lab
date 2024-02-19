@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {ProjectsState} from "../projects.state";
+import {ProjectsState} from "../../../services/projects.state";
 import {ActivatedRoute} from "@angular/router";
 import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
 
