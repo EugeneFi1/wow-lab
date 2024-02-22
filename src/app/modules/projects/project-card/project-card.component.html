@@ -1,5 +1,15 @@
 <div class="project-card">
     <mat-card class="project-card__item">
-        <mat-card-content>{{ project.name }} - {{ project.description }}</mat-card-content>
+        <mat-card-header>
+            <mat-icon mat-card-avatar [fontIcon]="project.icon || 'bookmark'"></mat-icon>
+            <mat-card-title>{{ project.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="project-card__item_content">
+            <div>{{ project.description }}</div>
+        </mat-card-content>
+        <mat-card-actions class="project-card__item_actions">
+            <button mat-button>EDIT</button>
+            <button mat-button>REMOVE</button>
+        </mat-card-actions>
     </mat-card>
 </div>
