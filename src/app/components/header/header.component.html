@@ -1,3 +1,13 @@
-<mat-toolbar>
+<mat-toolbar class="header-container">
     <span>WOW Lab</span>
+    @if (_selectedProject$ | async; as selectedProject) {
+        <div class="header-container__project-info">
+            <div>{{selectedProject.name}}</div>
+            <div class="header-container__project-info_description"
+                 [title]="selectedProject.description"
+            >
+                {{selectedProject.description}}
+            </div>
+        </div>
+    }
 </mat-toolbar>

@@ -20,6 +20,11 @@ const projects: Project[] = [
         name: "Angular signals",
         description: "Angular signals test",
         icon: "wifi"
+    },
+    {
+        id: "4",
+        name: "Angular pipes",
+        description: "Custom usefull Angular pipes"
     }
 ]
 
