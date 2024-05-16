@@ -38,11 +38,15 @@ export class ProjectsState extends RxState<ProjectsStateModel> {
         this.connect("projects", of(projects));
 
         this.connect("selectedProject", this.selectedProjectTrigger.pipe(switchMap(id =>
-            this.select("projects").pipe(map(projects => projects.find(project => project.id === id))))
+            this.select("projects").pipe(map(projects => projects.find(project => project.id === id) || null)))
         ));
     }
 
     public selectProject(id: Project["id"]): void {
         this.selectedProjectTrigger.next(id);
+    }
+
+    public resetSelectedProject(): void {
+        this.set("selectedProject", () => null);
     }
 }

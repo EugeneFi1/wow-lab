@@ -7,6 +7,6 @@ export interface Project {
 
 export interface ProjectsStateModel {
     projects: Project[];
-    selectedProject?: Project;
-    loading?: boolean;
+    selectedProject: Project | null;
+    loading: boolean;
 }

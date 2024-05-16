@@ -1,5 +1,5 @@
 <mat-toolbar class="header-container">
-    <span>WOW Lab</span>
+    <span routerLink="/" (click)="_resetProject()">WOW Lab</span>
     @if (_selectedProject$ | async; as selectedProject) {
         <div class="header-container__project-info">
             <div>{{selectedProject.name}}</div>
